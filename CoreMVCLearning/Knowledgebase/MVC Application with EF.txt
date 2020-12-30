@@ -1,0 +1,41 @@
+Use the below shortcut key to select all the code starting from "{" till its corresponding "}": Ctrl + Shift + ]
+
+Agenda:
+* Use Entity Framework Code First with Existing Database approach and show Department deatils.
+
+CREATE TABLE Department
+(
+	Id int primary key,
+	DeptName nvarchar(50) not null,
+	Loc nvarchar(50) not null
+)
+create table Employee
+(
+	Id int primary key,
+	EmpName nvarchar(50) not null,
+	Salary money,
+	DeptNo int references Department(Id)
+)
+
+About "ConfigureServices()" method: We use this method to add services to the container.
+
+Example for Json object:
+{
+  {"empNo": "1001"},
+  {"empName": "Chalapathi"}
+}
+
+Notes: How to debug MVC Application WHENEVER REQUIRED, BUT NOT ALL THE TIME.
+Pre condition: You are executing your MVC program using "Start without debugging" option available in Debug menu.
+Steps: Debug -> Attach to Process -> Select "iisexpress" -> click on "Attach" button.
+
+Agenda: Use n-Layer architecture to CRUD Department objects.
+   Agenda: Write code in Data Access Layer for CRUD operations for Department.
+      We need to write interface for all the classes we are about to develop. Implementing classes through interfaces is the coding standard we need to follow. Below is the steps to follow:
+	We'll write IDepartmentDAL interface inside DAL/Contracts folder with all the required methods.
+	We'll write DepartmentDAL class by implementing IDepartmentDAL interface inside DAL/Implementations folder.
+	To be able to successfully implement this methodology, we we need to write code in Startup.cs/ConfigureServices method like below:
+	services.AddTransient<IDepartmentDAL, DepartmentDAL>();
+	Check the code for more understanding. We need to follow the same approach for all the classes implemented through its corresponding interfaces.
+
+Task: Google: ASP.NET Core AddSingleton, AddTransient, AddScopped
