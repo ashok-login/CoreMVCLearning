@@ -1,0 +1,27 @@
+Agenda:
+
+01. Search Employees either by using EmpId, or EmpName
+02. Create Partial view to show individual employee details
+03. Use dependency injectction to achieve the above functionality
+04. Explain about how routing is working
+
+Agenda:
+-------
+01. Neat programming techniques
+  * Create model
+  * Wrte Data Access Layer related code first
+  * Write Business Logic Layer related code
+  * Write Controller related logic
+
+
+
+
+search item:
+  Id
+  EmpName
+
+
+
+Controller -> BLL -> DAL
+
+http://localhost:12345/Controller/ActionMethod/1003
