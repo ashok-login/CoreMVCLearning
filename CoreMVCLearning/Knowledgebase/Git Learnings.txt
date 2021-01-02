@@ -2,11 +2,6 @@ CoreMVCLearning Visual Studio solution Github path:
 	https://github.com/ashok-login/CoreMVCLearning.git
 
 Agenda:
-01. How to clone git repository?
-02. How to work with Git inside Visual Studio?
-  * How to create a branch?
-
-
-kak.mca@hotmail.com <- We've been using this since long back.
-
-kak.mca1@hotmail.com
+01. How to clone git repository into your local system?
+02. How to work with git inside Visual Studio Editor?
+   * How to create a branch inside github repository?
